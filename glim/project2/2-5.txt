@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//이차원 배열 대각선 순회하기
+#include <stdio.h>
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+#include <string>
+#include <vector>
+
+
+int solution(vector<vector<int>> board, int k) {
+    
+    int sum = 0;
+    for (int i = 0; i < board.size(); ++i)
+    {
+        for (int j = 0; j < board[i].size(); ++j)
+        {
+            if (i + j <= k)
+            {
+                sum += board[i][j];
+            }
+        }
+    }
+
+    int answer = sum;
+    return answer;
+}
+
+int main()
+{
+
+    vector<int>inner1{ 0, 1, 2 };
+    vector<int>inner2{ 1, 2, 3 };
+    vector<int>inner3{ 2, 3, 4 };
+    vector<int>inner4{ 3, 4, 5 };
+
+
+    vector<vector<int>> outter = { inner1, inner2, inner3, inner4 };
+    int ret = solution(outter, 2);
+
+
+    printf("ret : %d\n", ret);
+
+
+
+    
+
+    return 0;
+}

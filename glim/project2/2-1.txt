@@ -1,0 +1,43 @@
+// 양꼬치
+#include <stdio.h>
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+#include <string>
+#include <vector>
+
+
+
+int solution(int n, int k) {
+
+
+    int yang_price = 0;
+    int eum_price = 0;
+    int nservice_eum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (!(i % 10)) {
+            nservice_eum++;
+        }
+        yang_price += 12000;
+
+    }
+    for (int i = 0; i < (k - nservice_eum); i++)
+    {
+        eum_price += 2000;
+    }
+
+
+    int answer = yang_price + eum_price;
+    return answer;
+}
+
+int main()
+{
+solution(10,3);
+return 0;
+}

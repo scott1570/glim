@@ -1,0 +1,67 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//더 크게 합치기
+
+
+#include <stdio.h>
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+#include <string>
+#include <vector>
+
+
+
+
+int solution(int a, int b) {
+
+
+
+    char szNumber1[100] = { 0, };
+    sprintf_s(szNumber1, "%d%d", a, b);
+
+
+    int number1 = atoi(szNumber1);
+
+    char szNumber2[100] = { 0, };
+    sprintf_s(szNumber2, "%d%d", b, a);
+
+
+    int number2 = atoi(szNumber2);
+
+    int biggernumber = 0;
+    if (number1 > number2)
+        biggernumber = number1;
+    else if (number2 > number1)
+        biggernumber = number2;
+    else
+        biggernumber = number1;
+
+
+
+
+    
+
+
+    int answer = biggernumber;
+    return answer;
+}
+
+int main()
+{
+
+
+    int biggernum = solution(89,8);
+
+
+    printf("biggernum : %d\n", biggernum);
+
+
+
+    
+
+    return 0;
+}
+
