@@ -38,6 +38,7 @@ int solution(int n, int k) {
 
 int main()
 {
-solution(10,3);
+int ret = solution(10,3);
+printf("ret : %d\n", ret);
 return 0;
 }

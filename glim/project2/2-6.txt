@@ -9,6 +9,7 @@ using namespace std;
 
 #include <string>
 #include <vector>
+#include <math.h>
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //두 원 사이의 정수 쌍
@@ -33,10 +34,10 @@ int main()
 {
 
 
-    int ret = solution(2 6);
+    long long ret = solution(2, 6);
 
 
-    printf("ret : %d\n", ret);
+    printf("ret : %lld\n", ret);
 
 
 

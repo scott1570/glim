@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <string.h>
 #include <vector>
 #include <iostream>
 
@@ -22,7 +23,7 @@ int solution(string my_string, string is_prefix) {
     char tmpBuffer[100] = { 0, };
     for (int i = 0; i < strlen(mystring); i++)
     {
-        strncpy_s(tmpBuffer, mystring, i);
+        strncpy(tmpBuffer, mystring, i);
         if (strcmp(tmpBuffer, isPrefix) == 0) {
             answer = 1;
             break;
@@ -34,7 +35,8 @@ int solution(string my_string, string is_prefix) {
 
 int main()
 {
-	solution("banana", "ban");
+	int ret = solution("banana", "ban");
+	printf("Ret : %d\n", ret);
 
 	return 0;
 }

@@ -59,11 +59,6 @@ int solution(vector<int> ingredient) {
     return answer;
 }
 
-
-    
-    return answer;
-}
-
 int main()
 {
 #if 1
